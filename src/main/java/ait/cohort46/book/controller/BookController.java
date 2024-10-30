@@ -26,7 +26,7 @@ public class BookController {
         return bookService.removeBook(isbn);
     }
 
-    @PatchMapping("/book/{isbn}/patch/{title}")
+    @PatchMapping("/book/{isbn}/title/{title}")
     public BookDto updateBookTitle(@PathVariable String isbn, @PathVariable String title) {
         return bookService.updateBookTitle(isbn, title);
     }
